@@ -1,14 +1,15 @@
+import java.util.ArrayList;
+
 public class Task {
     private String title;
-    private String steps;
+    private ArrayList<Step> steps=new ArrayList<Step>();
     private String priority;
     private int dateDue;
     private String note;
     private int createdDate;
 
-    public Task(String title, String steps, String priority, int dateDue, String note, int createdDate) {
+    public Task(String title, String priority, int dateDue, String note, int createdDate) {
         this.title = title;
-        this.steps = steps;
         this.priority = priority;
         this.dateDue = dateDue;
         this.note = note;
@@ -22,15 +23,6 @@ public class Task {
     public void setTitle(String title) {
         this.title = title;
     }
-
-    public String getSteps() {
-        return steps;
-    }
-
-    public void setSteps(String steps) {
-        this.steps = steps;
-    }
-
     public String getPriority() {
         return priority;
     }
