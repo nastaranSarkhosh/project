@@ -1,21 +1,18 @@
-import java.util.ArrayList;
-
 public class Task {
     private String title;
-    private ArrayList<Step> steps=new ArrayList<Step>();
+    private int steps;
     private String priority;
-    private int dateDue;
+    private Date dateDue;
     private String note;
-    private int createdDate;
-
-    public Task(String title, String priority, int dateDue, String note, int createdDate) {
+    private Date createdDate;
+    public Task(String title, String priority, Date dateDue, String note, Date createdDate, int steps) {
         this.title = title;
         this.priority = priority;
         this.dateDue = dateDue;
         this.note = note;
         this.createdDate = createdDate;
+        this.steps=steps;
     }
-
     public String getTitle() {
         return title;
     }
@@ -30,12 +27,19 @@ public class Task {
     public void setPriority(String priority) {
         this.priority = priority;
     }
-
-    public int getDateDue() {
+    public Date getDateDue() {
         return dateDue;
     }
 
-    public void setDateDue(int dateDue) {
+    public int getSteps() {
+        return steps;
+    }
+
+    public void setSteps(int steps) {
+        this.steps = steps;
+    }
+
+    public void setDateDue(Date dateDue) {
         this.dateDue = dateDue;
     }
 
@@ -47,11 +51,11 @@ public class Task {
         this.note = note;
     }
 
-    public int getCreatedDate() {
+    public Date getCreatedDate() {
         return createdDate;
     }
 
-    public void setCreatedDate(int createdDate) {
+    public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
     }
 }

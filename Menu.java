@@ -10,6 +10,7 @@ public class Menu {
             option=input.nextInt();
             switch (option){
                 case 1:
+                    newGroup();
                     break;
                 case 2:
                     break;
@@ -23,5 +24,8 @@ public class Menu {
                     break;
             }
         }while(option!=7);
+    }
+    public static void newGroup(){
+
     }
 }
